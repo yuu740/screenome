@@ -1,16 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-
-    <title>Root</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCREENOME</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./asset/fonts/montserrat-subrayada-webfont/style.css"
+    />
+    <link rel="stylesheet" href="./asset/fonts/montserrat/style.css" />
+    <link rel="stylesheet" href="./asset/fonts/alumni-sans/style.css" />
+    <script src="./js/script.js"></script>
   </head>
   <body>
-    <h1>Selamat datang!</h1>
-    <p>Ini adalah isi dari index.html di root</p>
+    <header>
+      <nav class="navbar">
+        <div class="logo">SCREENOME</div>
+        <ul class="nav-links">
+          <li><a href="#about">Sinopsis</a></li>
+          <li><a href="#movie">Movie</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>
-      Tekan <a href="./html/template.html">template</a> untuk pergi ke template
-    </p>
+    <section class="full-width-background">
+      <h1 class="hero-title">SCREENOME</h1>
+    </section>
+
+    <div class="container-section">
+      <section class="about" id="about">
+        <h2>Apa itu "Screenome"?</h2>
+        <p>
+          Screenome menceritakan perjalanan Raka dalam menghadapi kuatnya ikatan
+          layar yang semakin lama terus menghisap esensi kehidupannya.
+        </p>
+        <p>
+          Screenome adalah sebuah karya yang tidak hanya menyentuh hati setiap
+          penontonnya, melainkan juga menjadi sebuah pesan dan pengingat agar
+          kita dapat selalu sadar akan apa yang ada di sekitar kita.
+        </p>
+      </section>
+
+      <section class="sinopsis" id="sinopsis">
+        <h2>Sinopsis</h2>
+        <p>
+          Di era digital yang semakin maju, teknologi telah menjadi bagian tak
+          terpisahkan dari kehidupan manusia. Bagi Raka, seorang mahasiswa,
+          layar ponsel bukan sekadar alat komunikasi, tetapi perlahan berubah
+          menjadi dunianya sendiri. Tanpa disadari, kebiasaannya semakin
+          menggerogoti hubungan, pendidikan, dan kehidupannya secara
+          keseluruhan.
+        </p>
+        <p>
+          Namun... sebuah kejadian tak terduga menguncangkan hidupnya,
+          memaksanya untuk melihat kenyataan dan mengambil keputusan penting.
+        </p>
+      </section>
+    </div>
+
+    <section class="movie" id="movie">
+      <h2>Movie</h2>
+      <div class="video-container">
+        <button class="play-btn" onclick="playVideo()">Play Video</button>
+        <div id="video-placeholder">
+          <img src="./asset/image/blackscreen.jpeg" alt="Video Thumbnail" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SCREENOME Project. All rights reserved.</p>
+    </footer>
   </body>
 </html>

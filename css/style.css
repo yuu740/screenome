@@ -1,5 +1,141 @@
-.test {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a2a2aa;
+  padding: 1rem 2rem;
+}
+
+.full-width-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../asset/image/main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.full-width-background h1 {
+  position: relative;
+  z-index: 1;
+  place-items: center;
+  margin-top: 300px;
+}
+
+.logo {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: "Montserrat Subrayada", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 10vw, 120px);
+  font-weight: 400;
+  color: #fff;
+}
+
+section {
+  text-align: center;
+}
+
+.about {
+  padding-top: 30px;
+  margin-top: 160px;
+}
+
+.about h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+.sinopsis h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+
+.about,
+.sinopsis p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+
+.container-section {
+  background-color: #292929;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 6vw;
+  }
 }
