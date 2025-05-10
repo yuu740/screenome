@@ -60,6 +60,7 @@ body {
   background-image: url("../asset/image/main.jpg");
   background-size: cover;
   background-position: center;
+  height: 100%;
   opacity: 0.5;
   z-index: -1;
 }
@@ -105,7 +106,7 @@ section {
 .about,
 .sinopsis p {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .movie {
