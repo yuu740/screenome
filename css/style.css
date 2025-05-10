@@ -5,6 +5,7 @@ body {
   margin: 0;
   background-color: #1e1e1e;
   color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar {
@@ -20,37 +21,10 @@ body {
   z-index: 99;
 }
 
-.full-width-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../asset/image/main.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  z-index: -1;
-
-  /* margin-top: 3rem; */
-}
-
-.full-width-background h1 {
-  position: relative;
-  z-index: 1;
-  place-items: center;
-  margin-top: 300px;
-}
-
 .logo {
   font-family: "Montserrat Subrayada", sans-serif;
-  font-weight: 400;
-  color: #fff;
   font-size: 1.2rem;
+  color: #fff;
 }
 
 .nav-links {
@@ -60,15 +34,34 @@ body {
   margin: 0rem 5rem;
 }
 
-.nav-links li a {
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
+.nav-links a {
   text-decoration: none;
+  color: #fff;
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #00bcd4;
+}
+
+.full-width-background {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.full-width-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../asset/image/main.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 .hero {
@@ -102,6 +95,7 @@ section {
   font-weight: 400;
   font-size: 80px;
 }
+
 .sinopsis h2 {
   font-family: "Alumni Sans", sans-serif;
   font-weight: 400;
@@ -111,22 +105,125 @@ section {
 .about,
 .sinopsis p {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 32px;
+}
+
+.movie {
+  background-color: #212832;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.hero-title {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: clamp(2rem, 10vw, 120px);
+  color: #fff;
 }
 
 .container-section {
   background-color: #292929;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
-h2 {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #ffffff;
+.about h2,
+.sinopsis h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-p {
-  font-size: 1em;
-  margin-bottom: 15px;
+.about p,
+.sinopsis p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.movie {
+  background-color: #212832;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.hero-title-movie {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: clamp(2rem, 10vw, 120px);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+#video-placeholder {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#video-placeholder img {
+  width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: red;
+  pointer-events: none;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.member h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.member-card {
+  display: flex;
+  background-color: #9d8c7a;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  align-items: center;
+}
+.member-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+.member-info strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 footer {
