@@ -11,7 +11,8 @@
     />
     <link rel="stylesheet" href="./asset/fonts/montserrat/style.css" />
     <link rel="stylesheet" href="./asset/fonts/alumni-sans/style.css" />
-    <script src="./js/script.js"></script>
+    <script src="./js/script/script.js"></script>
+    <script src="./js/script/teams.js"></script>
   </head>
   <body>
     <header>
@@ -20,7 +21,7 @@
         <ul class="nav-links">
           <li><a href="#about">Sinopsis</a></li>
           <li><a href="#movie">Movie</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#member">About Us</a></li>
         </ul>
       </nav>
     </header>
@@ -54,22 +55,33 @@
           keseluruhan.
         </p>
         <p>
-          Namun... sebuah kejadian tak terduga menguncangkan hidupnya,
-          memaksanya untuk melihat kenyataan dan mengambil keputusan penting.
+          Di era digital yang semakin maju, teknologi telah menjadi bagian tak
+          terpisahkan dari kehidupan manusia. Bagi Raka, seorang mahasiswa,
+          layar ponsel bukan sekadar alat komunikasi, tetapi perlahan berubah
+          menjadi dunianya sendiri. Tanpa disadari, kebiasaannya semakin
+          memengaruhi hubungan, pendidikan, dan kehidupannya secara keseluruhan.
+          Namun... sebuah kejadian tak terduga mengguncang hidupnya, memaksanya
+          untuk melihat kembali pilihan yang telah ia buat. Di tengah arus
+          digital yang semakin mendominasi, apakah Raka mampu menemukan kembali
+          makna dari dunia nyata?
         </p>
       </section>
     </div>
 
     <section class="movie" id="movie">
-      <h2>Movie</h2>
+      <h1 class="hero-title-movie">SCREENOME</h1>
       <div class="video-container">
-        <button class="play-btn" onclick="playVideo()">Play Video</button>
-        <div id="video-placeholder">
+        <div id="video-placeholder" onclick="playVideo()">
           <img src="./asset/image/blackscreen.jpeg" alt="Video Thumbnail" />
+          <div class="play-icon">&#9658;</div>
         </div>
       </div>
     </section>
 
+    <section class="member" id="member">
+      <h2>Meet the men Behind <em>"Screenome"</em></h2>
+      <div class="team-container" id="teamContainer"></div>
+    </section>
     <footer>
       <p>&copy; 2025 SCREENOME Project. All rights reserved.</p>
     </footer>
