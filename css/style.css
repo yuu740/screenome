@@ -13,6 +13,11 @@ body {
   align-items: center;
   background-color: #a2a2aa;
   padding: 1rem 2rem;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 
 .full-width-background::before {
@@ -30,6 +35,8 @@ body {
   height: 100%;
   opacity: 0.5;
   z-index: -1;
+
+  /* margin-top: 3rem; */
 }
 
 .full-width-background h1 {
@@ -50,6 +57,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0rem 5rem;
 }
 
 .nav-links li a {
@@ -81,6 +89,7 @@ body {
 
 section {
   text-align: center;
+  padding: 0 5rem;
 }
 
 .about {
@@ -102,7 +111,7 @@ section {
 .about,
 .sinopsis p {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .container-section {
