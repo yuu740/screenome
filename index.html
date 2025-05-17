@@ -11,14 +11,13 @@
     />
     <link rel="stylesheet" href="./asset/fonts/montserrat/style.css" />
     <link rel="stylesheet" href="./asset/fonts/alumni-sans/style.css" />
-    <script src="./js/script/script.js"></script>
-    <script src="./js/script/teams.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="logo">SCREENOME</div>
         <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">Sinopsis</a></li>
           <li><a href="#movie">Movie</a></li>
           <li><a href="#member">About Us</a></li>
@@ -26,7 +25,7 @@
       </nav>
     </header>
 
-    <section class="full-width-background">
+    <section class="full-width-background" id="home">
       <h1 class="hero-title">SCREENOME</h1>
     </section>
 
@@ -71,9 +70,22 @@
     <section class="movie" id="movie">
       <h1 class="hero-title-movie">SCREENOME</h1>
       <div class="video-container">
-        <div id="video-placeholder" onclick="playVideo()">
-          <img src="./asset/image/blackscreen.jpeg" alt="Video Thumbnail" />
-          <div class="play-icon">&#9658;</div>
+        <div class="video-container-wrapper">
+          <img
+            id="video-placeholder-img"
+            src="./asset/image/blackscreen.jpeg"
+            alt="Play Video"
+            style="cursor: pointer"
+          />
+          <div class="video-play">
+            <video id="myVideo" width="320" height="180" style="display: none">
+              <source
+                src="https://raw.githubusercontent.com/yuu740/video/main/test.mp4"
+                type="video/mp4"
+              />
+              Maaf, browser Anda tidak mendukung pemutar video HTML5.
+            </video>
+          </div>
         </div>
       </div>
     </section>
@@ -85,5 +97,8 @@
     <footer>
       <p>&copy; 2025 SCREENOME Project. All rights reserved.</p>
     </footer>
+    <script src="./js/script/video.js"></script>
+    <script src="./js/script/teams.js"></script>
+    <script src="./js/script/navbar.js"></script>
   </body>
 </html>
