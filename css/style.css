@@ -40,6 +40,12 @@ body {
   transition: color 0.3s;
 }
 
+.nav-links a.active {
+  color: #076470;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
 .nav-links a:hover {
   color: #00bcd4;
 }
@@ -160,17 +166,21 @@ section {
   display: inline-block;
 }
 
-#video-placeholder {
+#video-container-wrapper {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 
-#video-placeholder img {
+#video-placeholder-img {
   width: 320px;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .play-icon {
