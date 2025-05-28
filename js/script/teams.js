@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
       teamData.forEach((member, index) => {
         const card = document.createElement("div");
         card.className = "member-card";
-        card.style.animationDelay = `${index * 0.2}s`; 
+        // card.style.animationDelay = `${index * 0.2}s`;
+        card.style.setProperty("--index", index);
         card.innerHTML = `
           <img src="${member.image}" alt="${member.name}">
           <div class="member-info">
