@@ -32,6 +32,41 @@ body {
   pointer-events: none;
 }
 
+.loading-screen.fade-out-scale {
+  animation: fadeOutScale 1s forwards cubic-bezier(0.65, 0.05, 0.36, 1); 
+}
+
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+
+.loading-screen.fade-out-scale .loader,
+.loading-screen.fade-out-scale p {
+  animation: slideUpFadeOut 0.8s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+  animation-delay: 0.1s;
+}
+
+
+@keyframes slideUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+}
+
+
 /* .loader {
   border: 4px solid #a2a2aa;
   border-top: 4px solid #00bcd4;
@@ -52,6 +87,7 @@ body {
   color: #00bcd4;
   position: relative;
   animation: glitch 1s linear infinite;
+  margin-bottom: 1rem;
 }
 
 .loader::before,
