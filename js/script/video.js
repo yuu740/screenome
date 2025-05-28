@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
  if (videoPlaceholderImg && myVideo) {
     videoPlaceholderImg.addEventListener('click', function() {
-      videoPlaceholderImg.style.display = 'none';
-      myVideo.style.display = 'block';
+      videoPlaceholderImg.classList.add("hide");
+      myVideo.style.display = "block";
+      myVideo.classList.add("show");
       myVideo.controls = true;
       myVideo.play();
     });
