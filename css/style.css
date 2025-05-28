@@ -146,12 +146,29 @@ section {
   padding: 0 3rem;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  
 }
 
 section.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.about.visible {
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.sinopsis.visible {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; 
+}
+
+.movie.visible {
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out, background-color 0.6s ease-in-out; 
+}
+
+.member.visible {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
 }
 
 .about {
