@@ -1,11 +1,21 @@
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 body {
   margin: 0;
   background-color: #1e1e1e;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .navbar {
@@ -19,6 +29,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 99;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -31,7 +42,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0rem 5rem;
+  margin: 0rem 3rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -52,7 +64,7 @@ body {
 
 .full-width-background {
   position: relative;
-  height: 80vh;
+  height: 80dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,75 +94,41 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(2rem, 10vw, 120px);
+  font-size: clamp(2rem, 10dvw, 7.5rem);
   font-weight: 400;
   color: #fff;
 }
 
 section {
+  min-height: 50vh;
   text-align: center;
-  padding: 0 5rem;
+  padding: 0 3rem;
 }
 
 .about {
-  padding-top: 30px;
-  margin-top: 160px;
-}
-
-.about h2 {
-  font-family: "Alumni Sans", sans-serif;
-  font-weight: 400;
-  font-size: 80px;
-}
-
-.sinopsis h2 {
-  font-family: "Alumni Sans", sans-serif;
-  font-weight: 400;
-  font-size: 80px;
-}
-
-.about,
-.sinopsis p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-}
-
-.movie {
-  background-color: #212832;
-  text-align: center;
-  padding: 3rem 2rem;
-  position: relative;
-}
-
-.hero-title {
-  font-family: "Montserrat Subrayada", sans-serif;
-  font-size: clamp(2rem, 10vw, 120px);
-  color: #fff;
-}
-
-.container-section {
-  background-color: #292929;
-  padding: 3rem 2rem;
-  text-align: center;
+  padding-top: 2rem;
+  margin-top: 10rem;
 }
 
 .about h2,
 .sinopsis h2 {
   font-family: "Alumni Sans", sans-serif;
-  font-size: 3rem;
+  font-weight: 400;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
 .about p,
 .sinopsis p {
-  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .movie {
   background-color: #212832;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   position: relative;
 }
 
@@ -161,25 +139,24 @@ section {
   margin-bottom: 2rem;
 }
 
-.video-container {
-  position: relative;
-  display: inline-block;
-}
-
+.video-container,
 #video-container-wrapper {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
 
 #video-placeholder-img {
-  width: 320px;
-  height: 180px;
+  width: 20rem;
+  height: 11.25rem;
   object-fit: cover;
 }
 
 #myVideo {
   top: 0;
   left: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .play-icon {
@@ -192,25 +169,28 @@ section {
   pointer-events: none;
 }
 
-footer {
-  background-color: #111;
+.container-section {
+  background-color: #292929;
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 1rem;
-  color: #888;
-  font-size: 0.9rem;
+}
+
+.member {
+  padding: 2rem;
 }
 
 .member h2 {
   font-family: "Alumni Sans", sans-serif;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 5rem;
+  margin-bottom: 2rem;
 }
 
 .team-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  max-width: 56.25rem; /* 900px */
   margin: auto;
   font-family: Arial, sans-serif;
 }
@@ -219,21 +199,23 @@ footer {
   display: flex;
   background-color: #9d8c7a;
   color: white;
-  padding: 16px;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 0.75rem;
   align-items: center;
 }
+
 .member-card img {
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 16px;
+  margin-right: 1rem;
 }
+
 .member-info strong {
   display: block;
   font-size: 1rem;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 
 footer {
@@ -242,16 +224,100 @@ footer {
   text-align: center;
   padding: 1rem;
   color: #888;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
   .hero-title {
     font-size: 8vw;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #a2a2aa;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 0 2rem;
+  }
+
+  .about h2,
+  .sinopsis h2,
+  .member h2 {
+    font-size: 3rem;
+  }
+
+  .about p,
+  .sinopsis p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
   .hero-title {
     font-size: 6vw;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block !important;
+    color: #fff;
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #a2a2aa;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  #video-placeholder-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-container,
+  #video-container-wrapper {
+    width: 100%;
+  }
+
+  .play-icon {
+    font-size: 3rem;
   }
 }
