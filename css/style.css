@@ -1,3 +1,4 @@
+/* General */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -9,6 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Navbar */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -44,23 +46,33 @@ body {
   gap: 1.5rem;
   margin: 0rem 3rem;
   flex-wrap: wrap;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-links.show {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .nav-links a.active {
   color: #076470;
   text-decoration: underline;
-  transition: color 0.3s;
+  transform: scale(1.05);
 }
 
 .nav-links a:hover {
   color: #00bcd4;
+  transform: scale(1.1);
 }
+
+/* Hero Section */
 
 .full-width-background {
   position: relative;
@@ -69,6 +81,20 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .full-width-background::before {
@@ -97,12 +123,35 @@ body {
   font-size: clamp(2rem, 10dvw, 7.5rem);
   font-weight: 400;
   color: #fff;
+  animation: slideUp 1s ease-in-out 0.5s forwards;
+  opacity: 0;
 }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Section */
 
 section {
   min-height: 50vh;
   text-align: center;
   padding: 0 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about {
@@ -125,6 +174,8 @@ section {
   margin-bottom: 1rem;
 }
 
+/* Movie Section */
+
 .movie {
   background-color: #212832;
   text-align: center;
@@ -140,16 +191,22 @@ section {
 }
 
 .video-container,
-#video-container-wrapper {
+.video-container-wrapper {
   position: relative;
   display: inline-block;
   max-width: 100%;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #video-placeholder-img {
   width: 20rem;
   height: 11.25rem;
   object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#video-placeholder-img.hide {
+  opacity: 0;
 }
 
 #myVideo {
@@ -157,23 +214,17 @@ section {
   left: 0;
   max-width: 100%;
   height: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(0.95);
 }
 
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  color: red;
-  pointer-events: none;
+#myVideo.show {
+  opacity: 1;
+  transform: scale(1); 
 }
 
-.container-section {
-  background-color: #292929;
-  padding: 3rem 2rem;
-  text-align: center;
-}
+/* Member Section */
 
 .member {
   padding: 2rem;
@@ -202,7 +253,31 @@ section {
   padding: 1rem;
   border-radius: 0.75rem;
   align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: fadeInCard 0.8s ease-in-out forwards;
+  opacity: 0;
 }
+
+.member-card {
+  animation-delay: calc(var(--index) * 0.2s);
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .member-card img {
   width: 4rem;
@@ -240,14 +315,24 @@ footer {
   }
 
   .nav-links {
+    transform: translateY(-100%);
+    opacity: 0;
     display: none;
     flex-direction: column;
-    background-color: #a2a2aa;
     width: 100%;
+    background-color: #a2a2aa;
+    padding: 1rem;
+    margin: 0;
   }
 
   .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
     display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
   }
 
   .team-container {
@@ -290,22 +375,6 @@ footer {
     border-radius: 4px;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #a2a2aa;
-    padding: 1rem;
-    margin: 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
 
   #video-placeholder-img {
     width: 100%;
@@ -317,7 +386,4 @@ footer {
     width: 100%;
   }
 
-  .play-icon {
-    font-size: 3rem;
-  }
 }
