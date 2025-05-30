@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${member.image}" alt="${member.name}">
           <div class="member-info">
             <strong>${member.name}</strong>
-            <div>${member.npm}</div>
+            <div>${member.nim}</div>
             <div>${member.roles}</div>
             <div>|| ${member.note}</div>
           </div>
