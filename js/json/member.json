@@ -4,14 +4,14 @@
         "nim": "2702212042",
         "roles": "Project Manager & Cameraman",
         "note": "Dosen",
-        "image": "../asset/image/hosea.jpg"
+        "image": "/asset/image/hosea.jpg"
       },
       {
         "name": "Jefferson Darren Cendres",
         "nim": "2702256340",
         "roles": "Properti & Website",
         "note": "Raka",
-        "image": "../asset/image/jefferson.jpg"
+        "image": "/asset/image/jefferson.jpg"
       },
       {
         "name": "Johanna Angel Wudianto",
@@ -25,7 +25,7 @@
         "nim": "2702241484",
         "roles": "Website & Script",
         "note": "Ayah Raka",
-        "image": "../asset/image/revel.jpg"
+        "image": "/asset/image/revel.jpg"
       },
       {
         "name": "Jonathan Hopi Pranata",
