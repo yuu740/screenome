@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${member.image}" alt="${member.name}">
           <div class="member-info">
             <strong>${member.name}</strong>
-            <div>${member.nim}</div>
-            <div>${member.roles}</div>
-            <div>|| ${member.note}</div>
+            <div>> NIM : ${member.nim}</div>
+            <div>> Role : ${member.roles}</div>
+            <div>> Peran : ${member.note}</div>
           </div>
         `;
         container.appendChild(card);
