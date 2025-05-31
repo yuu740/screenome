@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const basePath = window.location.hostname.includes("github.io")
+    ? "/screenome"
+    : "";
   fetch("./js/json/member.json")
     .then((response) => response.json())
     .then((teamData) => {
@@ -8,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         card.className = "member-card";
         // card.style.animationDelay = `${index * 0.2}s`;
         card.style.setProperty("--index", index);
+        const imagePath = `${basePath}${member.image}`;
         card.innerHTML = `
-          <img src="${member.image}" alt="${member.name}">
+          <img src="${imagePath}" alt="${member.name}">
           <div class="member-info">
             <strong>${member.name}</strong>
             <div>> NIM : ${member.nim}</div>
