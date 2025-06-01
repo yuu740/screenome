@@ -289,7 +289,10 @@ body {
   opacity: 0.5;
   z-index: -1;
 }
-
+.hahi {
+  display: flex;
+  flex-direction: column;
+}
 .hero-title {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: clamp(2rem, 10vw, 7.5rem);
@@ -303,6 +306,7 @@ body {
   text-align: center;
   margin: 0;
   z-index: 1;
+
 }
 
 .hero-title span {
@@ -495,8 +499,15 @@ section.visible {
 .about {
   padding-top: 2rem;
   margin-top: 10rem;
+  align-items: center;
+  text-align: center;
+  
 }
-
+.sinopsis {
+  margin-top: 1rem;
+  align-items: center;
+  text-align: center;
+}
 .about h2,
 .sinopsis h2 {
   font-family: "Alumni Sans", sans-serif;
@@ -509,9 +520,17 @@ section.visible {
 .sinopsis p {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  text-align: justify;
+  width: 80%; 
+  margin: 0 auto; 
 }
-
+.container-section {
+  padding-right: 5rem;
+  padding-left: 5rem;
+  justify-items: center;
+  margin-bottom: 10rem;
+}
 /* Movie Section */
 
 .movie {
@@ -525,17 +544,18 @@ section.visible {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: clamp(2rem, 10vw, 120px);
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .video-container,
 .video-container-wrapper {
-  position: relative;
-  display: inline-block;
-  max-width: 100%;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+ 
+}
+#myVideo {
+  width: 100%;
+}
 #video-placeholder-img {
   width: 20rem;
   height: 11.25rem;
@@ -617,11 +637,11 @@ section.visible {
 }
 
 .member-card img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
   margin-right: 1rem;
+  border-radius: 50%;
 }
 
 .member-info{

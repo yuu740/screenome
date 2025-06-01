@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCREENOME</title>
-    <!-- <base href="/"> -->
-    <base href="/screenome/">
+    <base href="/">
+    <!-- <base href="/screenome/"> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -22,45 +22,37 @@
     <header>
       <nav class="navbar">
         <div class="logo">SCREENOME</div>
+        
         <button class="hamburger" id="hamburger">&#9776;</button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#home">Beranda</a></li>
           <li><a href="#about">Sinopsis</a></li>
-          <li><a href="#movie">Movie</a></li>
-          <li><a href="#member">About Us</a></li>
-          <li><a href="#behind-the-scene">Behind the Scene</a></li>
+          <li><a href="#movie">Trailer</a></li>
+          <li><a href="#member">Tentang Kami</a></li>
+          <li><a href="#behind-the-scene">Dibalik Layar</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="full-width-background" id="home">
+      <div class="hahi">
       <h1 class="hero-title">SCREENOME</h1>
+      <h2>Ketika Gadget Mengambil Alih Hidup, Apa Yang Tersisa?</h2>
+      </div>
     </section>
 
     <div class="container-section">
-      <section class="about" id="about">
+      <div class="about" id="about">
         <h2>Apa itu "Screenome"?</h2>
-        <p>
-          Screenome menceritakan perjalanan Raka dalam menghadapi kuatnya ikatan
-          layar yang semakin lama terus menghisap esensi kehidupannya.
-        </p>
         <p>
           Screenome adalah sebuah karya yang tidak hanya menyentuh hati setiap
           penontonnya, melainkan juga menjadi sebuah pesan dan pengingat agar
           kita dapat selalu sadar akan apa yang ada di sekitar kita.
         </p>
-      </section>
+      </div>
 
-      <section class="sinopsis" id="sinopsis">
+      <div class="sinopsis" id="sinopsis">
         <h2>Sinopsis</h2>
-        <p>
-          Di era digital yang semakin maju, teknologi telah menjadi bagian tak
-          terpisahkan dari kehidupan manusia. Bagi Raka, seorang mahasiswa,
-          layar ponsel bukan sekadar alat komunikasi, tetapi perlahan berubah
-          menjadi dunianya sendiri. Tanpa disadari, kebiasaannya semakin
-          menggerogoti hubungan, pendidikan, dan kehidupannya secara
-          keseluruhan.
-        </p>
         <p>
           Di era digital yang semakin maju, teknologi telah menjadi bagian tak
           terpisahkan dari kehidupan manusia. Bagi Raka, seorang mahasiswa,
@@ -72,7 +64,7 @@
           digital yang semakin mendominasi, apakah Raka mampu menemukan kembali
           makna dari dunia nyata?
         </p>
-      </section>
+      </div>
     </div>
 
     <section class="movie" id="movie">
@@ -88,7 +80,7 @@
           <div class="video-play">
             <video id="myVideo" width="320" height="180" style="display: none">
               <source
-                src="https://raw.githubusercontent.com/yuu740/video/main/test.mp4"
+                src="./asset/image/0601.mp4"
                 type="video/mp4"
               />
               Maaf, browser Anda tidak mendukung pemutar video HTML5.
@@ -99,12 +91,12 @@
     </section>
 
     <section class="member" id="member">
-      <h2>Meet the men Behind <em>"Screenome"</em></h2>
+      <h2>Temui Mereka yang Ada di Balik Layar <em>"Screenome"</em></h2>
       <div class="team-container" id="teamContainer"></div>
     </section>
 
     <section class="behind-the-scene" id="behind-the-scene">
-  <h2>Behind the Scene of <em>"Screenome"</em></h2>
+  <h2>Dibalik Layar dari <em>"Screenome"</em></h2>
   <div class="carousel-container">
     <div class="carousel">
       <div class="carousel-item active">
