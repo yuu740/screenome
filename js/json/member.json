@@ -18,7 +18,7 @@
         "nim": "2702267956",
         "roles": "Script & Website",
         "note": "Rekan Kerja Ayah",
-        "image": "johanna.jpg"
+        "image": "/asset/image/johanna.jpg"
       },
       {
         "name": "Revel Cahyadi",
@@ -32,7 +32,7 @@
         "nim": "2702223834",
         "roles": "Editor & Cameraman",
         "note": "Teman Kuliah Raka",
-        "image": "jonathan.jpg"
+        "image": "/asset/image/jonathan.png"
       },
       {
         "name": "Galio Geraldo",
