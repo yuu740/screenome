@@ -824,6 +824,7 @@ section.visible {
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   color: #fff;
   text-align: center;
+  align-items: center;
 }
 
 .behind-the-scene h2 {
@@ -1086,6 +1087,11 @@ footer {
   .member-card img{
     width: 80px;
     height: 80px;
+  }
+
+    #movie-frame{
+    width: 320px;
+    height: 180px;
   }
 
   .carousel-item img {
