@@ -1028,6 +1028,11 @@ footer {
     max-height: 40rem;
   }
 
+  #movie-frame{
+    width: 400px;
+    height: 225px;
+  }
+
   .team-container{
     margin: 4rem;
   }
@@ -1089,7 +1094,7 @@ footer {
     height: 80px;
   }
 
-    #movie-frame{
+  #movie-frame{
     width: 320px;
     height: 180px;
   }
