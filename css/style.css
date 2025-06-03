@@ -781,11 +781,6 @@ section.visible {
   opacity: 0;
 }
 
-.member-card img{
-  border-radius: 50%;
-  margin-right: 2rem;
-}
-
 .member-card {
   animation-delay: calc(var(--index) * 0.2s);
 }
@@ -810,7 +805,7 @@ section.visible {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
-  margin-right: 1rem;
+  margin-right: 2rem;
   border-radius: 50%;
 }
 
