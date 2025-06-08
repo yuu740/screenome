@@ -823,6 +823,9 @@ section.visible {
   padding: 50px 20px;
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   color: #fff;
+  display: flex;
+  flex-direcction: column;
+  
   text-align: center;
   align-items: center;
 }
