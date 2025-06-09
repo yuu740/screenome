@@ -703,46 +703,61 @@ section.visible {
   /* height: 50rem; */
   min-height: 50rem;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-title-movie {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: clamp(2rem, 10vw, 120px);
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .video-container,
 .video-container-wrapper {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  width: 100%;
+  max-width: 560px;
 }
 #myVideo {
   width: 100%;
-}
-#video-placeholder-img {
-  width: 20rem;
-  height: 11.25rem;
-  object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
-}
-
-#video-placeholder-img.hide {
-  opacity: 0;
-}
-
-#myVideo {
-  top: 0;
-  left: 0;
-  max-width: 100%;
   height: auto;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  opacity: 0;
-  transform: scale(0.95);
+  display: block;
 }
 
-#myVideo.show {
-  opacity: 1;
-  transform: scale(1);
+#movie-frame {
+  display: none;
+  width: 100%;
+  height: 315px;
+}
+
+#movie-frame.show {
+  display: block;
+}
+
+.trailer-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#watch-full-movie-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+#watch-full-movie-btn:hover {
+  background-color: #0056b3;
 }
 
 /* Member Section */
@@ -765,7 +780,7 @@ section.visible {
   gap: 1.25rem;
   max-width: 56.25rem; /* 900px */
   margin: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .member-card {
@@ -825,7 +840,7 @@ section.visible {
   color: #fff;
   display: flex;
   flex-direcction: column;
-  
+
   text-align: center;
   align-items: center;
 }
@@ -877,8 +892,6 @@ section.visible {
   object-fit: contain;
   display: block;
 }
-
-
 
 .carousel-caption {
   position: absolute;
@@ -935,22 +948,22 @@ section.visible {
 }
 
 .carousel-item .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #E8D7B8;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    z-index: 10; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #e8d7b8;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
 
 .indicator {
@@ -1027,23 +1040,23 @@ footer {
     font-size: 1.1rem;
   }
 
-  .movie{
+  .movie {
     max-height: 40rem;
   }
 
-  #movie-frame{
-    width: 400px;
+  #movie-frame,
+  #myVideo {
+    width: 100%;
     height: 225px;
   }
 
-  .team-container{
+  .team-container {
     margin: 4rem;
   }
 
   .carousel-container {
-  margin: auto 2rem;
+    margin: auto 2rem;
   }
-
 
   .carousel-item img {
     height: 300px;
@@ -1078,26 +1091,25 @@ footer {
     border-radius: 4px;
   }
 
-  #video-placeholder-img {
+  #myVideo {
     width: 100%;
     height: auto;
   }
-
   .video-container,
   #video-container-wrapper {
     width: 100%;
   }
 
-   .team-container{
+  .team-container {
     margin: 0.1rem;
   }
 
-  .member-card img{
+  .member-card img {
     width: 80px;
     height: 80px;
   }
 
-  #movie-frame{
+  #movie-frame {
     width: 320px;
     height: 180px;
   }
@@ -1106,8 +1118,8 @@ footer {
     height: 200px;
   }
 
-   .carousel-container {
-  margin: auto 0.8rem;
+  .carousel-container {
+    margin: auto 0.8rem;
   }
 
   .carousel-prev,
