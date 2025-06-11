@@ -71,41 +71,28 @@
       <h1 class="hero-title-movie">SCREENOME</h1>
       <div class="video-container">
         <div class="video-container-wrapper">
-          <img
-            id="video-placeholder-img"
-            src="./asset/image/blackscreen.jpeg"
-            alt="Play Video"
-            style="cursor: pointer"
-          />
-          <div>
-            <iframe 
-              id="movie-frame"
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/6prXPwRtMrE?si=Hq5qJymTvXuGrvqJ" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen></iframe>
-            <!-- <iframe 
-              id="movie-frame"
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/0Me0Tn22ZHk?si=LraX9v-k5ehX5TDL" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
-            </iframe> -->
-          </div>
-          <div class="video-play">
-            <video id="myVideo" width="320" height="180" style="display: none">
+          <div class="trailer-and-button">
+            <video id="myVideo" width="560" height="315">
               <source src="./asset/image/0601.mp4" type="video/mp4" />
               Maaf, browser Anda tidak mendukung pemutar video HTML5.
             </video>
+            <button id="watch-full-movie-btn" style="display: none">
+              Watch Full Movie Here!
+            </button>
           </div>
+          <iframe
+            id="movie-frame"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0Me0Tn22ZHk?si=LraX9v-k5ehX5TDL"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="hidden"
+          >
+          </iframe>
         </div>
       </div>
     </section>
