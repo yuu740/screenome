@@ -834,7 +834,7 @@ section.visible {
   margin-bottom: 0.25rem;
 }
 
-.behind-the-scene {
+.blooper {
   padding: 50px 20px;
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   color: #fff;
@@ -845,13 +845,13 @@ section.visible {
   align-items: center;
 }
 
-.behind-the-scene h2 {
+.blooper h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-family: "Montserrat", sans-serif;
 }
 
-.behind-the-scene h2 em {
+.blooper h2 em {
   color: #e8d7b8;
   font-style: italic;
 }
@@ -1062,7 +1062,7 @@ footer {
     height: 300px;
   }
 
-  .behind-the-scene h2 {
+  .blooper h2 {
     font-size: 2rem;
   }
 
