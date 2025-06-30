@@ -834,6 +834,72 @@ section.visible {
   margin-bottom: 0.25rem;
 }
 
+/* Behind The Scene Section */
+.behind-the-scene {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.behind-the-scene.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.behind-the-scene h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.behind-the-scene h2 em {
+  color: #e8d7b8;
+  font-style: italic;
+}
+
+.bts-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bts-video {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 4/3;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(157, 140, 122, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.bts-video:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(157, 140, 122, 0.3);
+}
+
+.bts-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #a2a2aa;
+  text-align: justify;
+  max-width: 640px;
+  line-height: 1.6;
+}
+
 .blooper {
   padding: 50px 20px;
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
@@ -1054,6 +1120,26 @@ footer {
     margin: 4rem;
   }
 
+
+  .behind-the-scene {
+    padding: 2rem 1rem;
+  }
+
+  .behind-the-scene h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .bts-video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bts-description {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+
   .carousel-container {
     margin: auto 2rem;
   }
@@ -1112,6 +1198,24 @@ footer {
   #movie-frame {
     width: 320px;
     height: 180px;
+  }
+
+  .behind-the-scene {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .behind-the-scene h2 {
+    font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+  }
+
+  .bts-video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bts-description {
+    font-size: 1rem;
+    max-width: 95%;
   }
 
   .carousel-item img {
