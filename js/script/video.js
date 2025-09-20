@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (myVideo && watchFullMovieBtn && movieFrame && trailerAndButtonContainer) {
         myVideo.controls = true; 
-        myVideo.play();
 
 
         myVideo.addEventListener('ended', function() {
