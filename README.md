@@ -17,7 +17,8 @@ In a new digital era, technology has become an inseparable part of human life. F
 - **Looped Slide for Blooper Video with captions**
 - **Simple, responsive layout for promotional landing page.**
 
-### Project Structure
+### 📁 Project Structure
+```css
 screenome/
 ├── asset/
 │   ├── fonts/
@@ -31,3 +32,4 @@ screenome/
 │   └── script/
 ├── index.html
 ├── README.md
+```
